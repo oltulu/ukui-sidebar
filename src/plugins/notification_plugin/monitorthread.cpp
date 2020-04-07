@@ -46,7 +46,7 @@ void MonitorThread::extractData(QString strOutput)
     strOutputTmp = strOutputTmp.mid(nIndex + 1);
     if("notify-send" == strAppName)
     {
-        strAppName = "未知来源";
+        strAppName = tr("Unknown source");
     }
 
     //图标路径的获取

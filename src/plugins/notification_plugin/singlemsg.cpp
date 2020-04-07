@@ -104,7 +104,7 @@ SingleMsg::SingleMsg(AppMsg* pParent, QString strIconPath, QString strAppName, Q
     //设置通知消息中的通知时间
     m_pTimeLabel = new QLabel();
     m_pTimeLabel->setObjectName("pushtime");
-    m_pTimeLabel->setText("现在");
+    m_pTimeLabel->setText(tr("now"));
     m_pTimeLabel->setStyleSheet("background-color:transparent;");
 
     //单独收纳按钮
@@ -324,7 +324,7 @@ void SingleMsg::setBodyLabelWordWrap(bool bFlag)
 void SingleMsg::setLeftItem(int nShowLeftCount)
 {
     m_nShowLeftCount = nShowLeftCount;
-    QString strShowLeft = "还有" + QString::number(nShowLeftCount) + "则通知";
+    QString strShowLeft = tr("In addition ") + QString::number(nShowLeftCount) + tr(" notice");
     m_pShowLeftItemLabel->setText(strShowLeft);
 
     //当剩余条数大于0, 且是折叠状态则显示剩余标签
